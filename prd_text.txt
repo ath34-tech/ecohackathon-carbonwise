@@ -1,0 +1,182 @@
+
+
+Product Requirements Document CarbonWise AI
+Sustainability Intelligence Platform March 9, 2026
+
+Contents
+
+
+Product Overview
+CarbonWise AI is an AI-powered sustainability platform designed to help users compare the lifecycle carbon emissions of different vehicle types including Electric Vehicles (EV), Hybrid vehicles, and Internal Combustion Engine (ICE) vehicles.
+The platform analyzes driving patterns, regional energy sources, and lifecycle emissions to recommend the most environmentally sustainable vehicle for each user.
+Beyond consumer recommendations, the platform aggregates anonymized mobility data to provide valuable insights for governments, businesses, and sustainability researchers through an analytics dashboard.
+
+Problem Statement
+Vehicle sustainability comparisons are often misleading because they focus only on fuel effi- ciency. In reality, emissions occur across the entire lifecycle of a vehicle including:
+Manufacturing emissions
+Battery production emissions
+Fuel or electricity usage
+End-of-life disposal
+Consumers lack access to tools that provide accurate lifecycle comparisons. Governments and mobility companies also lack aggregated data about sustainable mobility decisions.
+
+Goals and Objectives
+Primary Goals
+Provide accurate lifecycle carbon comparisons of vehicles
+Recommend the most sustainable vehicle for a user’s driving pattern
+Enable carbon impact simulations for long-term vehicle ownership
+Generate sustainability insights for policy and business decisions
+
+Success Metrics
+Number of lifecycle simulations performed
+Vehicle recommendations generated
+Government or business analytics usage
+Estimated carbon emissions analyzed by the platform
+
+Target Users
+Consumers
+Individuals considering purchasing a vehicle and wanting to understand environmental im- pact.
+
+Government Agencies
+Urban planning departments and sustainability offices analyzing transportation emissions.
+
+Businesses
+EV manufacturers
+Fleet operators
+Sustainability consulting firms
+
+Core Features
+Vehicle Carbon Comparison
+Users can compare lifecycle emissions of:
+Electric Vehicles
+Hybrid Vehicles
+Petrol Vehicles
+Diesel Vehicles
+
+Driving Pattern Analysis
+The system analyzes driving inputs such as:
+Daily driving distance
+City vs highway driving ratio
+Years of ownership
+Geographic location
+
+Carbon Impact Simulator
+Users can simulate emissions over time based on ownership duration and vehicle type.
+
+AI Sustainability Advisor
+An AI agent system analyzes user inputs and provides recommendations along with expla- nations.
+
+Government and Business Analytics Dashboard
+Aggregated data insights include:
+City-level EV adoption potential
+Carbon reduction projections
+Driving behavior analytics
+Lifecycle emissions comparisons
+
+AI Agent System
+The platform uses a multi-agent system to analyze sustainability data.
+
+User Query Agent
+Parses user input and extracts structured driving data.
+
+Driving Pattern Agent
+Calculates total lifetime driving distance and energy consumption.
+
+Lifecycle Emission Agent
+Computes lifecycle emissions including manufacturing, usage, and disposal phases.
+
+Energy Source Agent
+Determines electricity carbon intensity based on geographic location.
+
+Recommendation Agent
+Generates the final sustainability recommendation.
+
+System Architecture
+User interacts with web application
+Backend API processes user inputs
+AI agents analyze driving patterns
+Carbon calculation engine computes emissions
+Results are stored in Supabase database
+Dashboard displays aggregated analytics
+
+Technology Stack
+Frontend
+Next.js
+Tailwind CSS
+Plotly.js for visualization
+
+Backend
+Python
+FastAPI
+Pydantic
+
+AI Agent Framework
+CrewAI
+LangGraph (optional)
+
+Database
+Supabase (PostgreSQL)
+
+Deployment
+Vercel (frontend)
+Render or Railway (backend)
+Supabase cloud database
+
+Database Schema
+Users Table
+id
+email
+city
+created at
+
+Driving Profiles
+id
+user id
+daily distance
+city driving ratio
+highway driving ratio
+ownership years
+
+Vehicles
+id
+vehicle name
+vehicle type
+battery size
+fuel efficiency
+manufacturing emissions
+
+Carbon Results
+id
+user id
+vehicle type
+manufacturing emissions
+usage emissions
+
+total emissions
+recommendation
+timestamp
+
+Data Sources
+Lifecycle emission data will be sourced from:
+International Council on Clean Transportation (ICCT)
+International Energy Agency (IEA)
+ElectricityMap grid carbon intensity
+EPA vehicle efficiency datasets
+
+Business Model
+Consumer Tier
+Free sustainability comparison tool.
+
+Enterprise Tier
+Subscription-based analytics dashboard for:
+Government agencies
+EV manufacturers
+Sustainability consultancies
+
+Future Enhancements
+Real-time electricity carbon intensity integration
+Fleet optimization tools
+Mobility policy simulation tools
+Integration with EV charging networks
+
+Conclusion
+CarbonWise AI provides a scalable platform for analyzing vehicle sustainability through lifecycle carbon calculations and AI-powered recommendations. By combining consumer decision tools with aggregated mobility insights, the platform supports both individual sus- tainability choices and data-driven policy development.
